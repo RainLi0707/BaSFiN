@@ -62,3 +62,5 @@ vs2015_runtime=14.40.33807=h98bb1dd_1
 wheel=0.44.0=py312haa95532_0
 xz=5.4.6=h8cc25b3_1
 zlib=1.2.13=h8cc25b3_1
+pytest
+flake8

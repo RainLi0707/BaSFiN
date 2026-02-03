@@ -95,15 +95,15 @@ class NAC(nn.Module):
             nn.Sigmoid(),
         )
 
+        # 初始化權重並移動到設備
+        self.apply(self._initialize_weights)
+        self.to(self.device)
 
     def _initialize_weights(self, module):
         if isinstance(module, (nn.Linear, nn.Embedding)):
             nn.init.xavier_uniform_(module.weight)
             if hasattr(module, 'bias') and module.bias is not None:
                 nn.init.zeros_(module.bias)
-                
-        self.apply(self._initialize_weights)
-        self.to(self.device)
 
     # ------------------------------------------------------------------ #
     #                               Forward                              #

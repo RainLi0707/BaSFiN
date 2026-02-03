@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from scipy.sparse import csr_matrix, hstack
 from collections import Counter
 
+
 class Data:
     def __init__(self, path=None, symmetry=True, team_size=5, seed=None):
         self.seed = seed
